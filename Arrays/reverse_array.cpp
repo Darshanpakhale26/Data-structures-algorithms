@@ -1,33 +1,24 @@
+// Program to reverse an array
+
 #include <iostream>
+#include <bits/stdc++.h> // include this header file to use reverse function
 using namespace std;
-void reverseArray(int arr[], int start, int end)
+
+void reverseArray(int arr[], int n)   
 {
-    while (start < end)
+    reverse(arr, arr + n);      // using inbuilt function to reverse the array
+    for (int i = 0; i < n; i++) // printing the reversed array
     {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
+        cout << arr[i] << " ";
     }
 }
-
-void printArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-        cout << arr[i] << " ";
-        cout<<endl;
-}
-
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int arr[] = {4, 5, 3, 6, 7};          // initializing the array
+    int n = sizeof(arr) / sizeof(arr[0]); // calculating the size of array
+    reverseArray(arr, n);                 // calling the function to reverse the array
 
-    printArray(arr, n);
-    cout << arr << endl;
-
-    reverseArray(arr, 0, n - 1);
-    cout << "The reverse of array is:  " <<  endl;
-    printArray(arr, n);
+    return 0;
 }
+
+// Output: 7 6 3 5 4
