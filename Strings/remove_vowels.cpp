@@ -17,7 +17,7 @@ string removeVowels(string s)
 }
 int main()
 {
-    string s = "leetcodeisacommunityforcoders";
+    string s = "Hello";
     cout << removeVowels(s) << endl;
     return 0;
 }
