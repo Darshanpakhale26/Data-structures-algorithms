@@ -1,4 +1,4 @@
-// Program to find lrngth of a linked list
+// Program to find length of a linked list
 
 #include <iostream>
 using namespace std;
