@@ -9,10 +9,10 @@ string unique_char(string s) {
     unordered_map<char, int> count;
     string result = "";
     for (int i = 0; i < s.length(); i++) {
-        if (count.find(s[i]) == count.end()) {
-            count[s[i]] = 1;
+        if (count.find(s[i]) == count.end()) {  // If the character is not present in the map
+            count[s[i]] = 1;                   // Add the character to the map
         } else {
-            count[s[i]]++;
+            count[s[i]]++;                  // If the character is already present, increment the count
         }
     }
     for (int i = 0; i < s.length(); i++) {
