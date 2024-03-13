@@ -4,28 +4,19 @@
 using namespace std;
 
 void reverseWords(string &s) {
-    stack<string> st;
-    string word = "";
-    for (int i = 0; i < s.length(); i++) {
-        if (s[i] == ' ') {
-            st.push(word);
-            word = "";
-        } else {
-            word += s[i];
+    int start = 0;
+    for (int end = 0; end < s.length(); end++) {
+        if (s[end] == ' ') {
+            reverse(s.begin() + start, s.begin() + end);
+            start = end + 1;
         }
     }
-    st.push(word);
-    s = "";
-    while (!st.empty()) {
-        s += st.top();
-        st.pop();
-        if (!st.empty()) {
-            s += " ";
-        }
-    }
+    reverse(s.begin() + start, s.end());
+    reverse(s.begin(), s.end());
 }
+
 int main() {
-    string s = "Hello, my name is John";
+    string s = "i like this program very much";
     reverseWords(s);
     cout << s << endl;
     return 0;
