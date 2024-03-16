@@ -33,4 +33,3 @@ int main() {
     cout << string_format(s) << endl;
     return 0;
 }
-
