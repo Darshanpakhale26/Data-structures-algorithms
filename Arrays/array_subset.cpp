@@ -39,10 +39,10 @@ using namespace std;
 bool isSubset(vector<int> &arr1, vector<int> &arr2) {
     unordered_set<int> s;
     for (int i = 0; i < arr1.size(); i++) {
-        s.insert(arr1[i]);
+        s.insert(arr1[i]);                          // inserting all elements of arr1 into the set
     }
     for (int i = 0; i < arr2.size(); i++) {
-        if (s.find(arr2[i]) == s.end()) {
+        if (s.find(arr2[i]) == s.end()) {           // if any element of arr2 is not present in arr1, return false 
             return false;
         }
     }
