@@ -9,15 +9,15 @@ using namespace std;
 int equilibrium_point(vector<int> arr) {
     int sum = 0;
     for (int i = 0; i < arr.size(); i++) {
-        sum += arr[i];
+        sum += arr[i];               // Calculate the sum of all elements
     }
     int left_sum = 0;
     for (int i = 0; i < arr.size(); i++) {
-        sum -= arr[i];
-        if (left_sum == sum) {
+        sum -= arr[i];               // Subtract the element from sum
+        if (left_sum == sum) {       // If left_sum is equal to sum, return the element
             return arr[i];
         }
-        left_sum += arr[i];
+        left_sum += arr[i];          // Add the element to left_sum
     }
     return -1;
 }
