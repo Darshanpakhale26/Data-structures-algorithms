@@ -32,7 +32,7 @@ string removeVowels(string s)
 
 {
     string res;
-    for (char c : s)
+    for (char c : s)     // iterating through the string  // Note: Here we are using a for-each loop to iterate through the string
     {
         if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u')
             res += c;
