@@ -1,4 +1,4 @@
-// // Progam to Rearrange an array
+// Progam to Rearrange an array
 
 // #include <iostream>
 // #include <vector>
@@ -30,29 +30,3 @@
 //     cout << endl;
 //     return 0;
 // }
-
-
-// First three elements are in ascending order and the next three elements are in descending order.
-
-#include <iostream>
-#include<algorithm>
-#include <vector>
-
-
-using namespace std;
-
-int main(){
-    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int n = arr.size();
-    sort(arr.begin(), arr.end());
-
-    for(int i=0; i<=n/2;i++){
-        cout<<arr[i]<<" ";
-
-    }
-    for(int i=n-1; i>n/2;i--){
-        cout<<arr[i]<<" ";
-    }
-    
-    return 0;
-}
