@@ -1,32 +1,23 @@
-// Progam to Rearrange an array
-
-// #include <iostream>
+#include <iostream>
+// #include <set>
 // #include <vector>
 
 // using namespace std;
 
-// void rearrange(vector<int> &arr) {
-//     int n = arr.size();
-//     vector<int> temp(n);
-//     for (int i = 0; i < n; i++) {
-//         temp[i] = arr[i];            
+// vector<int> remove_duplicates(vector<int> arr) {
+//     set<int> s;                                 // creating a set
+//     for (int i = 0; i < arr.size(); i++) {
+//         s.insert(arr[i]);                       // inserting elements in set
 //     }
-//     int left = 0, right = n - 1;
-//     for (int i = 0; i < n; i++) {
-//         if (i % 2 == 0) {
-//             arr[i] = temp[right--];
-//         } else {
-//             arr[i] = temp[left++];
-//         }
-//     }
+//     vector<int> res(s.begin(), s.end());        // converting set to vector
+//     return res;
 // }
 
 // int main() {
-//     vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};     
-//     rearrange(arr);
-//     for (int i = 0; i < arr.size(); i++) {
-//         cout << arr[i] << " ";
+//     vector<int> arr = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6};
+//     vector<int> res = remove_duplicates(arr);
+//     for (auto i : res) {
+//         cout << i << " ";
 //     }
-//     cout << endl;
 //     return 0;
 // }
