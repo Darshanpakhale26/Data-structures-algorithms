@@ -13,7 +13,7 @@ void camelCase(string str) {
         if (isupper(str[i])) {
             cout << " ";
         }
-        cout << (char)tolower(str[i]);
+        cout << (char)tolower(str[i]);  // Convert the character to lower case 
     }
 }
 
