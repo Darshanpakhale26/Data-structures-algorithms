@@ -10,7 +10,7 @@ int count_pairs(vector<int> arr, int sum) {
     unordered_set<int> s;
     int count = 0;
     for (int i = 0; i < arr.size(); i++) {
-        if (s.find(sum - arr[i]) != s.end()) {   
+        if (s.find(sum - arr[i]) != s.end()) {      
             count++;
         }
         s.insert(arr[i]);
