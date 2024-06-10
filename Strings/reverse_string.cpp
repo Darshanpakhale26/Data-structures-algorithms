@@ -18,3 +18,14 @@ int main()
 }
 
 // Output: gnirtsym
+
+// Time complexity: O(n) where n is the length of the string
+
+
+
+
+
+
+
+
+

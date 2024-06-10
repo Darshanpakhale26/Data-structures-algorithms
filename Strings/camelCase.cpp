@@ -10,7 +10,7 @@ using namespace std;
 
 void camelCase(string str) {
     for (int i = 0; i < str.length(); i++) {
-        if (isupper(str[i])) {
+        if (isupper(str[i])) {        
             cout << " ";
         }
         cout << (char)tolower(str[i]);  // Convert the character to lower case 
