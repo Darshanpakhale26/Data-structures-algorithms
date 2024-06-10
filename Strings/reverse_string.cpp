@@ -48,3 +48,33 @@ int main()
 
     return 0;
 }
+
+
+
+
+// Another approach to reverse a string is to use recursion. We can reverse a string recursively by reversing the substring excluding the first character, and then appending the first character at the end of the reversed substring.
+
+
+#include <iostream>
+using namespace std;
+
+void reverseString(string str, int start, int end) // function to reverse the string using recursion
+{
+    if (start >= end) // base case: if start pointer is greater than or equal to end pointer
+    {
+        cout << str; // print the reversed string
+        return;
+    }
+
+    swap(str[start], str[end]); // swap characters at start and end pointers
+    reverseString(str, start + 1, end - 1); // recursively call the function with updated pointers
+}
+
+int main()
+{
+    string str = "mystring"; // initializing the string
+    reverseString(str, 0, str.length() - 1); // calling the function to reverse the string
+
+    return 0;
+}
+
