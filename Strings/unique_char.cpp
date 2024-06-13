@@ -9,8 +9,8 @@ string unique_char(string s) {
     unordered_map<char, int> count;
     string result = "";
     for (int i = 0; i < s.length(); i++) {
-        if (count.find(s[i]) == count.end()) {  // If the character is not present in the map
-            count[s[i]] = 1;                   // Add the character to the map
+        if (count.find(s[i]) == count.end()) {  // If the character is not present in the map  
+            count[s[i]] = 1;                  // Add the character to the map with count 1
         } else {
             count[s[i]]++;                  // If the character is already present, increment the count
         }
@@ -24,7 +24,10 @@ string unique_char(string s) {
 }
 
 int main() {
-    string s = "Darshan";
+    string s = "Hello, World!";
     cout << unique_char(s) << endl;  // He, Wrd!
     return 0;
 }
+
+
+// time complexity: O(n)
